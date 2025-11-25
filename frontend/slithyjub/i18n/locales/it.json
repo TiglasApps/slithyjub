@@ -38,6 +38,25 @@
         "primary": "Inizia Ora",
         "secondary": "Contatta le Vendite"
     },
+    "auth": {
+        "signInTitle": "Accedi al tuo account",
+        "signUpTitle": "Crea un nuovo account",
+        "emailLabel": "Indirizzo email",
+        "passwordLabel": "Password",
+        "signInButton": "Accedi",
+        "signUpButton": "Registrati",
+        "needAccount": "Hai bisogno di un account? Registrati",
+        "haveAccount": "Hai già un account? Accedi",
+        "invalidCredentials": "Credenziali non valide",
+        "registrationFailed": "Registrazione fallita"
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "welcome": "Bentornato,",
+        "description": "Questa è una pagina protetta. Puoi vederla solo se sei autenticato.",
+        "totalProjects": "Progetti Totali",
+        "hoursLogged": "Ore Registrate"
+    },
     "meta": {
         "title": "SlithyJub - Marketing con Micro‑Influencer per Startup & Imprese",
         "description": "Connettiti con micro‑influencer autentici per amplificare il tuo messaggio. La piattaforma premium per il marketing moderno."

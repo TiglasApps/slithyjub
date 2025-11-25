@@ -10,8 +10,8 @@
         </div>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-8">
-<a href="#features" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">{{ $t('nav.features') }}</a>
+        <nav v-if="!token" class="hidden md:flex space-x-8">
+          <a href="#features" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">{{ $t('nav.features') }}</a>
           <a href="#solutions" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">{{ $t('nav.solutions') }}</a>
           <a href="#pricing" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">{{ $t('nav.pricing') }}</a>
           <a href="#about" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">{{ $t('nav.about') }}</a>
@@ -19,15 +19,16 @@
 
         <!-- CTA Buttons -->
         <div class="hidden md:flex items-center space-x-4">
-          <!-- Language Switcher -->
           <div class="flex items-center space-x-2 text-sm font-medium text-gray-300 mr-2">
             <button @click="setLocale('en')" :class="{ 'text-white font-bold': locale === 'en', 'text-gray-500 hover:text-gray-300': locale !== 'en' }">EN</button>
             <span class="text-gray-600">|</span>
             <button @click="setLocale('it')" :class="{ 'text-white font-bold': locale === 'it', 'text-gray-500 hover:text-gray-300': locale !== 'it' }">IT</button>
           </div>
 
-          <button class="text-gray-300 hover:text-white font-medium text-sm transition-colors">{{ $t('nav.login') }}</button>
-          <button class="btn-primary text-sm">{{ $t('nav.getStarted') }}</button>
+          <button v-if="!token" @click="navigateTo('/login')" class="text-gray-300 hover:text-white font-medium text-sm transition-colors">{{ $t('nav.login') }}</button>
+          <button v-else @click="logout" class="text-gray-300 hover:text-white font-medium text-sm transition-colors">Logout</button>
+          <button v-if="!token" class="btn-primary text-sm">{{ $t('nav.getStarted') }}</button>
+          <button v-else @click="navigateTo('/dashboard')" class="btn-primary text-sm">Dashboard</button>
         </div>
 
         <!-- Mobile menu button -->
@@ -45,13 +46,17 @@
     <!-- Mobile Menu -->
     <div v-show="isMobileMenuOpen" class="md:hidden glass border-t border-gray-800">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Features</a>
-        <a href="#solutions" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Solutions</a>
-        <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Pricing</a>
-        <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">About Us</a>
-        <div class="mt-4 pt-4 border-t border-gray-800 flex flex-col space-y-3 px-3">
-          <button class="w-full text-left text-gray-300 hover:text-white font-medium">Log in</button>
-          <button class="w-full btn-primary text-center">Get Started</button>
+        <template v-if="!token">
+          <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Features</a>
+          <a href="#solutions" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Solutions</a>
+          <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Pricing</a>
+          <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">About Us</a>
+        </template>
+        <div :class="{ 'mt-4 pt-4 border-t border-gray-800': !token }" class="flex flex-col space-y-3 px-3">
+          <button v-if="!token" @click="navigateTo('/login')" class="w-full text-left text-gray-300 hover:text-white font-medium">Log in</button>
+          <button v-else @click="logout" class="w-full text-left text-gray-300 hover:text-white font-medium">Logout</button>
+          <button v-if="!token" class="w-full btn-primary text-center">Get Started</button>
+          <button v-else @click="navigateTo('/dashboard')" class="w-full btn-primary text-center">Dashboard</button>
         </div>
       </div>
     </div>
@@ -63,6 +68,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 
 const { locale, setLocale } = useI18n()
+const { token, logout } = useAuth()
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
 

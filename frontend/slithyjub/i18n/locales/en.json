@@ -38,6 +38,25 @@
         "primary": "Get Started Now",
         "secondary": "Contact Sales"
     },
+    "auth": {
+        "signInTitle": "Sign in to your account",
+        "signUpTitle": "Create a new account",
+        "emailLabel": "Email address",
+        "passwordLabel": "Password",
+        "signInButton": "Sign in",
+        "signUpButton": "Sign up",
+        "needAccount": "Need an account? Sign up",
+        "haveAccount": "Already have an account? Sign in",
+        "invalidCredentials": "Invalid credentials",
+        "registrationFailed": "Registration failed"
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "welcome": "Welcome back,",
+        "description": "This is a protected page. You can only see this if you are logged in.",
+        "totalProjects": "Total Projects",
+        "hoursLogged": "Hours Logged"
+    },
     "meta": {
         "title": "SlithyJub - Micro-Influencer Marketing for Startups & Enterprises",
         "description": "Connect with authentic micro-influencers to amplify your brand message. The premium platform for modern marketing."
