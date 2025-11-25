@@ -1,0 +1,45 @@
+{
+    "nav": {
+        "features": "Features",
+        "solutions": "Solutions",
+        "pricing": "Pricing",
+        "about": "About Us",
+        "login": "Log in",
+        "getStarted": "Get Started"
+    },
+    "hero": {
+        "tagline": "🚀 Revolutionizing Micro-Influencer Marketing",
+        "titlePre": "Amplify Your Brand with",
+        "titleHighlight": "Authentic Voices",
+        "description": "SlithyJub connects startups and enterprises with vetted micro-influencers to drive real engagement and measurable growth.",
+        "startCampaign": "Start Your Campaign",
+        "watchDemo": "Watch Demo",
+        "trustedBy": "Trusted by innovative companies"
+    },
+    "features": {
+        "title": "Why Choose SlithyJub?",
+        "subtitle": "We provide the tools you need to scale your social presence effectively, whether you're a startup or a global enterprise.",
+        "card1": {
+            "title": "High Impact",
+            "desc": "Leverage the power of micro-influencers who have higher engagement rates and more authentic connections with their audience."
+        },
+        "card2": {
+            "title": "Data-Driven",
+            "desc": "Real-time analytics and performance tracking to ensure your ROI is maximized and your campaigns are optimized."
+        },
+        "card3": {
+            "title": "Enterprise Secure",
+            "desc": "Built with enterprise-grade security and compliance in mind, giving you peace of mind while you scale."
+        }
+    },
+    "cta": {
+        "title": "Ready to amplify your reach?",
+        "description": "Join hundreds of forward-thinking companies using SlithyJub to connect with their audience authentically.",
+        "primary": "Get Started Now",
+        "secondary": "Contact Sales"
+    },
+    "meta": {
+        "title": "SlithyJub - Micro-Influencer Marketing for Startups & Enterprises",
+        "description": "Connect with authentic micro-influencers to amplify your brand message. The premium platform for modern marketing."
+    }
+}

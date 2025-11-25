@@ -1,0 +1,45 @@
+{
+    "nav": {
+        "features": "Caratteristiche",
+        "solutions": "Soluzioni",
+        "pricing": "Prezzi",
+        "about": "Chi siamo",
+        "login": "Accedi",
+        "getStarted": "Inizia"
+    },
+    "hero": {
+        "tagline": "🚀 Rivoluzioniamo il Marketing con Micro‑Influencer",
+        "titlePre": "Amplifica il tuo brand con",
+        "titleHighlight": "Voci Autentiche",
+        "description": "SlithyJub collega startup e imprese con micro‑influencer selezionati per generare reale coinvolgimento e crescita misurabile.",
+        "startCampaign": "Avvia la tua campagna",
+        "watchDemo": "Guarda la demo",
+        "trustedBy": "Scelto da aziende innovative"
+    },
+    "features": {
+        "title": "Perché scegliere SlithyJub?",
+        "subtitle": "Forniamo gli strumenti necessari per scalare la tua presenza social in modo efficace, che tu sia una startup o un'impresa globale.",
+        "card1": {
+            "title": "Alto Impatto",
+            "desc": "Sfrutta il potere dei micro-influencer che hanno tassi di coinvolgimento più elevati e connessioni più autentiche con il loro pubblico."
+        },
+        "card2": {
+            "title": "Basato sui Dati",
+            "desc": "Analisi in tempo reale e monitoraggio delle prestazioni per garantire che il tuo ROI sia massimizzato e le tue campagne siano ottimizzate."
+        },
+        "card3": {
+            "title": "Sicurezza Enterprise",
+            "desc": "Costruito con sicurezza e conformità di livello enterprise, per darti tranquillità mentre cresci."
+        }
+    },
+    "cta": {
+        "title": "Pronto ad amplificare la tua portata?",
+        "description": "Unisciti a centinaia di aziende lungimiranti che usano SlithyJub per connettersi autenticamente con il loro pubblico.",
+        "primary": "Inizia Ora",
+        "secondary": "Contatta le Vendite"
+    },
+    "meta": {
+        "title": "SlithyJub - Marketing con Micro‑Influencer per Startup & Imprese",
+        "description": "Connettiti con micro‑influencer autentici per amplificare il tuo messaggio. La piattaforma premium per il marketing moderno."
+    }
+}
